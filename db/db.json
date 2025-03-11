@@ -1,0 +1,19 @@
+{
+  "user": [
+    {
+      "name": "dilmi",
+      "email": "dilmiishara2000@gmail.com",
+      "password": "abcd@123"
+    },
+    {
+      "id": "483a",
+      "user": [
+        {
+          "name": "lakni hansana",
+          "email": "laknihansana200@gmail.com",
+          "password": "abcd@123"
+        }
+      ]
+    }
+  ]
+}
