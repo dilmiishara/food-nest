@@ -16,7 +16,10 @@
                 <td>{{item.name}}</td>
                 <td>{{item.contact}}</td>
                 <td>{{item.address}}</td>
-                <td><router-link :to="'/update/'+item.id">Update</router-link></td>
+                <td>
+                    <router-link :to="'/update/'+item.id">Update</router-link>
+                    <button v-on:click="deleteResturant(item.id)">delete</button>
+                </td>
 
             </tr>
         </table>
@@ -40,18 +43,31 @@ export default {
     HeaderCom
   },
 
+  methods:{
+    async deleteResturant(id)
+    {
+        let result = await axios.delete("http://localhost:3000/resturant/"+id);
+        console.warn(result)
+        if(result.status==200){
+            this.loadData()
+        }
+    },
+    async loadData(){
+        let user = localStorage.getItem('user-info');
+        this.name = JSON.parse(user).name;
+        if(!user){
+            this.$router.push({name:'SignUp'})
+        }
+
+        let result =await axios.get("http://localhost:3000/resturant");
+        console.warn(result);
+        this.resturant = result.data;
+        }
+  },
+
   async mounted(){
-    let user = localStorage.getItem('user-info');
-    this.name = JSON.parse(user).name;
-    if(!user){
-        this.$router.push({name:'SignUp'})
+    this.loadData();
     }
-
-    let result =await axios.get("http://localhost:3000/resturant");
-    console.warn(result);
-    this.resturant = result.data;
-
-}
 };
 </script>
 

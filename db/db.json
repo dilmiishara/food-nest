@@ -68,46 +68,6 @@
       "address": "Noida sector 50"
     },
     {
-      "id": "0b97",
-      "user": [
-        {
-          "name": "lakni hansana",
-          "email": "laknihansana200@gmail.com",
-          "password": "abcd@123"
-        }
-      ]
-    },
-    {
-      "id": "db0a",
-      "user": [
-        {
-          "name": "lakni hansana",
-          "email": "laknihansana200@gmail.com",
-          "password": "abcd@123"
-        }
-      ]
-    },
-    {
-      "id": "fa6d",
-      "user": [
-        {
-          "name": "lakni hansana",
-          "email": "laknihansana200@gmail.com",
-          "password": "abcd@123"
-        }
-      ]
-    },
-    {
-      "id": "1834",
-      "user": [
-        {
-          "name": "lakni hansana",
-          "email": "laknihansana200@gmail.com",
-          "password": "abcd@123"
-        }
-      ]
-    },
-    {
       "id": 2,
       "name": "Pizza hut",
       "contact": 22222,
