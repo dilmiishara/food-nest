@@ -124,6 +124,18 @@
       "name": "P&S cake",
       "contact": 44444,
       "address": "homagama"
+    },
+    {
+      "id": "265e",
+      "name": "Cake & cafe",
+      "address": "homagama",
+      "contact": "55555"
+    },
+    {
+      "id": "6c5c",
+      "name": "Central Cafe",
+      "address": "colombo",
+      "contact": "66666"
     }
   ]
 }
