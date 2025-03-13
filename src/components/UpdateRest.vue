@@ -13,6 +13,7 @@
 
 <script>
 import HeaderCom from './HeaderCom.vue'
+import axios from 'axios'
 
 export default {
   name: "UpdateRest", 
@@ -30,11 +31,17 @@ export default {
     }
   },
 
-  mounted(){
+  async mounted(){
     let user = localStorage.getItem('user-info');
     if(!user){
         this.$router.push({name:'SignUp'})
     }
+    console.warn(this.$route.params.id)
+
+    const result = await axios.get('http://localhost:3000/resturant/'+this.$route.params.id)
+    console.warn(result)
+
+    this.resturant= result.data
 }
 };
 </script>
